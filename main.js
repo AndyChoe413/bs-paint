@@ -15,12 +15,12 @@
  * To make the second one happen, the number to change
  * is the first argument to `repeat`, currently set at 10.
  */
-const gridWidth = 10;
+const gridWidth = 50;
 let count = 0;
 while (count <= gridWidth * gridWidth) {
   const canvas = document.querySelector('.canvas');
   const div = document.createElement('div');
-  div.className = 'square color-5';
+  div.className = 'square color-9';
   canvas.appendChild(div);
   count++;
 }
@@ -71,6 +71,14 @@ while (count <= gridWidth * gridWidth) {
 // You'll need to add the appropriate event listener for each
 // square and for each palette color from the functions you
 // wrote above.
+
+//toggle
+const toggle = document.querySelector('.toggle-btn')
+toggle.addEventListener('click', () => {
+  const body = document.body
+  body.classList.toggle('dark-mode')
+  console.log(body.classList)
+})
 
 
 //mouse tracker

@@ -2,6 +2,26 @@ body {
   background-color: violet;
 }
 
+.toggle-btn {
+  padding: 15px;
+  background-color: black;
+  color: white;
+  font-size: large;
+  text-decoration: none;
+}
+
+.toggle-btn:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 8px 5px 30px 4px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -15,7 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 35px;
-  color:rgb(143, 96, 236);
+  color: rgb(143, 96, 236);
 }
 
 .brush-selection {
@@ -28,7 +48,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .palette {
@@ -41,14 +60,14 @@ body {
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .current-brush,
 .palette-color {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
 }
 
@@ -56,13 +75,13 @@ body {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
   border: 1px solid black;
 }
 
 .square {
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .color-1 {
@@ -82,5 +101,21 @@ body {
 }
 
 .color-5 {
+  background-color: purple;
+}
+
+.color-6 {
+  background-color: pink;
+}
+
+.color-7 {
+  background-color: turquoise;
+}
+
+.color-8 {
+  background-color: black;
+}
+
+.color-9 {
   background-color: white;
 }
