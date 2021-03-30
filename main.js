@@ -71,3 +71,57 @@ while (count <= gridWidth * gridWidth) {
 // You'll need to add the appropriate event listener for each
 // square and for each palette color from the functions you
 // wrote above.
+
+
+//mouse tracker
+let mouseDown = false
+
+document.body.addEventListener('mousedown', () => {
+  mouseDown = true;
+})
+
+document.body.addEventListener('mouseup', () => {
+  mouseDown = false;
+})
+
+//color palette query array
+const paletteColor = document.querySelectorAll('.palette-color');
+
+//loop through colors
+for (let color of paletteColor) {
+  //add event listener with event attribute to access the target of our click
+  color.addEventListener('click', (e) => {
+    const colorClicked = e.target
+    const brush = document.querySelector('.current-brush')
+    //use classList to get an array of all classes and use replace.
+    //classList[1] is the given index of where the color class is located in the domTokenList(array)
+    console.log(brush.classList)
+    brush.classList.replace(brush.classList[1], colorClicked.classList[1])
+  })
+}
+
+//grab all squares
+const squares = document.querySelectorAll('.square');
+
+//on clicks event
+for (let square of squares) {
+  square.addEventListener('click', (e) => {
+    const clickedSquare = e.target
+    const brush = document.querySelector('.current-brush')
+    console.log(clickedSquare.classList)
+    clickedSquare.classList.replace(clickedSquare.classList[1], brush.classList[1])
+    mouseDown = false
+  })
+}
+
+//mouseover event
+for (let square of squares) {
+  square.addEventListener('mouseover', (e) => {
+    if (mouseDown) {
+      const clickedSquare = e.target;
+      const brush = document.querySelector('.current-brush');
+      console.log(clickedSquare.classList);
+      clickedSquare.classList.replace(clickedSquare.classList[1], brush.classList[1]);
+    }
+  })
+}
