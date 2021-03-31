@@ -20,6 +20,7 @@ body {
 .dark-mode {
   background-color: black;
   color: white;
+  background-image: url("https://i.pinimg.com/originals/f3/5e/48/f35e48e008d5c394be5e152795760b00.jpg");
 }
 
 .app {
@@ -28,6 +29,7 @@ body {
   height: 500px;
   align-items: center;
   background-color: thistle;
+  background-image: url("https://i.pinimg.com/originals/f3/5e/48/f35e48e008d5c394be5e152795760b00.jpg");
 }
 
 .headings {
@@ -35,7 +37,8 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 35px;
-  color: rgb(143, 96, 236);
+  color: white;
+  
 }
 
 .brush-selection {
